@@ -1,12 +1,7 @@
-import { defineStore } from 'pinia';
+import { createPinia } from 'pinia';
 
-export default  useCounterStore = defineStore('counter', {
-  state: () => ({
-    count: 1,
-  }),
-  actions: {
-    accumulate() {
-      this.count++;
-    },
-  },
-});
+const store = createPinia();
+
+export default store;
+
+export * from './modules/counter';
